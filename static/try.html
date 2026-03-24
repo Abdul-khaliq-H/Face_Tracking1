@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Try FaceTrack</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="container nav">
+      <h1>Try FaceTrack</h1>
+      <a class="btn ghost" href="/index.html">Back to Home</a>
+    </header>
+
+    <main class="container try">
+      <section class="card">
+        <h2>Upload Video</h2>
+        <input id="videoFile" type="file" accept="video/*" />
+        <button id="uploadBtn" class="btn">Process Video</button>
+      </section>
+
+      <section class="card">
+        <h2>Progress</h2>
+        <p id="statusText">No job running.</p>
+        <div class="progress-wrap">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+      </section>
+
+      <section class="card" id="resultSection" hidden>
+        <h2>Output Preview</h2>
+        <video id="resultVideo" controls></video>
+        <a id="downloadLink" class="btn" download="tracked.mp4">Download</a>
+      </section>
+    </main>
+
+    <script src="/js/try.js"></script>
+  </body>
+</html>
